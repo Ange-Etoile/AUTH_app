@@ -13,6 +13,7 @@ async function signUp() {
         if(error) throw error
         successMsg.value = "Check your email to confirm your account"
     }catch(error){
+
         errorMsg.value = error.message
     }
 }
@@ -31,7 +32,7 @@ async function signUp() {
                         <input type="password" placeholder="please enter your password" class="shadow appearance-none border rounded-md w-full py-2 px-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-opacity-50">
                         <span class="text-red-600 font-semibold">{{ errorMsg }}</span>
                    </div>
-                   <span class="text-red-600 font-semibold">{{ successMsg }}</span>
+                   <span class="text-green-600 font-semibold">{{ successMsg }}</span>
                 </div>
                 <button type="submit" class="px-4 py-2 rounded-lg bg-indigo-600">Sign Up</button>
                 
